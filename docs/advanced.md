@@ -36,7 +36,7 @@ DIG can ingest arbutrary JSON documents that have the following attributes:
 
 - `doc_id`: an arbitrary string to identify each document. Each distinct document should have different `doc_id`s. When multiple documents have the same `doc_id`, only the last one processed will appear in the search engine. 
 - `url`: a possbily made-up URL for the document. DIG groups documents based on the domain name in the `url`, so every document must have a `url`. It is not necessary that the `url` can be fetched.
-- `raw_cpntent`: an optional HTML rendition of the document, used for display. The attribute must be present even if it's value is empty.
+- `raw_content`: an optional HTML rendition of the document, used for display. The attribute must be present even if it's value is empty.
 
 The documents must be stored in a JSON lines file with `.jl` extension ([http://jsonlines.org/](http://jsonlines.org/)), one document per line.
 If the resulting file is large, you can compress it using `gzip` (DIG only recognizes `gz` files and will report an error with any other compression format).
